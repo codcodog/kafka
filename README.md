@@ -22,17 +22,17 @@ $ docker-compose stop
 进入容器
 ```bash
 $ docker exec -it kafka /bin/bash
+
+$ cd /opt/kafka/bin
 ```
 
 生产消息
 ```bash
-$ cd /opt/kafka/bin
 $ ./kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic
 ```
 
 消费消息
 ```bash
-$ cd /opt/kafka/bin
 $ ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning
 ```
 
